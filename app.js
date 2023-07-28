@@ -15,9 +15,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use("/contact", contactController);
+app.use("/privateget/contact", contactController);
 app.use("/login", loginRoutes);
+
 app.use("/refresh", refreshRoutes); 
-app.use('/assignrole', assignRoleRoutes); // Add the new route
-// Use the correct variable name
+app.use('/assignrole', assignRoleRoutes);
+
 
 module.exports = app;
